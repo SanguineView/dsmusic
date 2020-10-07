@@ -215,6 +215,10 @@
         
         p {
             color:$light;
+            font-size: 2.25rem;
+            text-align:center;
+            text-transform: uppercase;
+            margin: 0;
         }
 
         &-social {
@@ -272,12 +276,52 @@
         margin:0 auto;
     }
 
-    &__item {
+    &__link {
+        position:relative;
+
+        &:hover > .shop__overlay {
+            opacity:0.85;
+        }
+    }
+
+    &__overlay {
+        background:$secondary;
+        position: absolute;
+        top:0;
+        left:0;
+        opacity:0;
+        height:100%;
+        width:100%;
+        transition:all 0.3s ease;
+        color:$light;
         display:flex;
-        flex-direction: column;
+        flex-direction:column;
         justify-content: center;
         align-items:center;
-        padding-bottom: 2.5rem;
+        font-size:2.35rem;
+        font-weight:500;
+        
+        p {
+            color:$light;
+            font-size: 2.25rem;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        &-social {
+            display:flex;
+            justify-content: space-around;
+            align-items:center;
+
+            &-link {
+
+                &_svg {
+                    width:3.5rem;
+                    fill:$light;
+                    margin-right:1.5rem;
+                }
+            }
+        }
     }
 
     &__img {

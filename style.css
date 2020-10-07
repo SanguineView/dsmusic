@@ -1677,7 +1677,11 @@ img.alignright,
     font-size: 2.35rem;
     font-weight: 500; }
     .releases__overlay p {
-      color: #fefff3; }
+      color: #fefff3;
+      font-size: 2.25rem;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0; }
     .releases__overlay-social {
       display: flex;
       justify-content: space-around;
@@ -1713,12 +1717,39 @@ img.alignright,
     column-gap: 2rem;
     max-width: 144rem;
     margin: 0 auto; }
-  .shop__item {
+  .shop__link {
+    position: relative; }
+    .shop__link:hover > .shop__overlay {
+      opacity: 0.85; }
+  .shop__overlay {
+    background: #0f1d26;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s ease;
+    color: #fefff3;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 2.5rem; }
+    font-size: 2.35rem;
+    font-weight: 500; }
+    .shop__overlay p {
+      color: #fefff3;
+      font-size: 2.25rem;
+      text-transform: uppercase;
+      margin: 0; }
+    .shop__overlay-social {
+      display: flex;
+      justify-content: space-around;
+      align-items: center; }
+      .shop__overlay-social-link_svg {
+        width: 3.5rem;
+        fill: #fefff3;
+        margin-right: 1.5rem; }
   .shop__img {
     margin-bottom: 1.5rem; }
   .shop__product {
