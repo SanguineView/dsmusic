@@ -1,0 +1,301 @@
+/* Front Page
+-------------------------------------------------- */
+
+.wrap {
+        width:144rem;
+        margin:0 auto;
+        display: block;
+}
+
+.section__heading {
+    background: url(images/meet-bg.jpg) no-repeat center left;
+    background-size:cover;
+    padding: 5rem 0 5rem;
+
+    .heading-primary {
+        margin:0;
+        color:$light;
+    }
+}
+
+.albumBuy {
+    background: url(images/asfalt-light-50.png), linear-gradient(166deg,
+     rgba(3, 20, 30,0.9) 0%,
+     rgba(55, 66, 68,0.9) 30%,
+     rgba(#495a8e,0.9) 50%,
+     rgba(115, 81, 141,0.9) 65%, 
+     rgba(#d85d93,0.9) 80%,
+     rgba(#e26d66,0.9) 90%),
+     rgba(#04151f,0.9) 100%;
+
+    padding:20rem 0;
+
+    &__container {
+        display:grid;
+        grid-template-columns:auto auto;
+        grid-template-rows:auto auto auto;
+
+    }
+
+    &__cover {
+        grid-row:1 / 4;
+    }
+
+    &__text {
+        grid-column:2 / 3;
+        grid-row: 1 / 2;
+        justify-self: center;
+        align-self: end;
+
+        .heading-primary {
+            color:$light;
+            font-size:8rem;
+            text-align:center;
+            max-width: 10ch;
+            margin:0;
+        }
+    }
+
+    &__links {
+        grid-column:2 / 3;
+        grid-row: 2 / 3;
+        justify-self: center;
+        align-self: start;
+
+        a {
+            margin-right:1.5rem;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__stream {
+        grid-column:2 / 3;
+        grid-row: 3 / 4;
+        justify-self: center;
+        align-self: start;
+    }
+
+    &__svg {
+        width: 1.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
+.shows {
+    background: url(images/border.png) repeat-x center top, url(images/asfalt-dark-75.png) repeat center top, linear-gradient(166deg, rgba(3, 20, 30, 0.9) 0%, rgba(55, 66, 68, 0.9) 45%, rgba(73, 90, 142, 0.9) 60%, rgba(115, 81, 141, 0.8) 75%, rgba(216, 93, 147, 0.8) 90%, rgba(226, 109, 102, 0.8) 95%), rgba(4, 21, 31, 0.9) 100%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    .heading-primary {
+        color:$light;
+    }
+
+    .gigpress-table {
+        color:$light;
+        background: rgba(3, 20, 30,0.75);
+
+        tbody:last-of-type {
+            border-bottom:0.25rem solid #000
+        }
+
+        th {
+            border:none;
+        }
+
+        td {
+            padding:15px 20px;
+            font-size:1.65rem;
+            font-weight:500;
+            border:none;
+            color:$light;
+            line-height: 135%;
+        }
+
+        tr {
+            border:none;
+        }
+
+        a {
+            color:$light;
+            text-decoration:none;
+        }
+
+        .gigpress-header {
+            border:0.5rem solid #000;
+            background:rgba($purple, 0.25);
+
+            th {
+
+            }
+        }
+
+        .gigpress-row,
+        .gigpress-info {
+            border-bottom:0.25rem solid #000;
+        }
+
+        .gigpress-row:first-of-type {
+            border: 0.25rem solid #000;
+        }
+
+        .gigpress-country {
+            display:none;
+        }
+
+        span.gigpress-info-item {
+            color:$light;
+            font-size:1.3rem;
+        }
+
+        span.gigpress-info-label {
+            display:none;
+        }
+    }
+
+    .gigpress-subscribe {
+        display: none
+    }
+}
+
+.releases {
+    background: url(images/border.png) repeat-x center top, url(images/asfalt-dark-75.png) repeat center top, linear-gradient(166deg, rgba(3, 20, 30, 0.9) 0%, rgba(55, 66, 68, 0.9) 45%, rgba(73, 90, 142, 0.9) 60%, rgba(115, 81, 141, 0.8) 75%, rgba(216, 93, 147, 0.8) 90%, rgba(226, 109, 102, 0.8) 95%), rgba(4, 21, 31, 0.9) 100%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    .heading-primary {
+        color:$light;
+    }
+
+    .wrap {
+        max-width:144rem;
+        margin:0 auto;
+    }
+
+    &__container {
+        max-width:144rem;
+        margin:0 auto;
+        display:flex;
+        justify-content: space-between;
+        align-items:center;
+
+        @include respond(tab) {
+            flex-direction:column;
+            justify-content: center;
+         }
+    }
+
+    &__link {
+        width:30%;
+        position:relative;
+
+        &:hover > .releases__overlay {
+            opacity:0.85;
+        }
+    }
+
+    &__overlay {
+        background:$secondary;
+        position: absolute;
+        top:0;
+        left:0;
+        opacity:0;
+        height:100%;
+        width:100%;
+        transition:all 0.3s ease;
+        color:$light;
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        font-size:2.35rem;
+        font-weight:500;
+        
+        p {
+            color:$light;
+        }
+
+        &-social {
+            display:flex;
+            justify-content: space-around;
+            align-items:center;
+
+            &-link {
+
+                &_svg {
+                    width:3.5rem;
+                    fill:$light;
+                    margin:0 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.meet {
+    background: url(images/border.png) repeat-x center top, url(images/asfalt-dark-75.png) repeat center top, linear-gradient(166deg, rgba(3, 20, 30, 0.9) 0%, rgba(55, 66, 68, 0.9) 45%, rgba(73, 90, 142, 0.9) 60%, rgba(115, 81, 141, 0.8) 75%, rgba(216, 93, 147, 0.8) 90%, rgba(226, 109, 102, 0.8) 95%), rgba(4, 21, 31, 0.9) 100%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    .heading-primary {
+        color:$light;
+    }
+
+    &__container {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        color:$light;
+        font-weight:500;
+    }
+}
+
+.shop {
+    background: url(images/border.png) repeat-x center top, url(images/asfalt-dark-75.png) repeat center top, linear-gradient(166deg, rgba(3, 20, 30, 0.9) 0%, rgba(55, 66, 68, 0.9) 45%, rgba(73, 90, 142, 0.9) 60%, rgba(115, 81, 141, 0.8) 75%, rgba(216, 93, 147, 0.8) 90%, rgba(226, 109, 102, 0.8) 95%), rgba(4, 21, 31, 0.9) 100%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+    .heading-primary {
+        color:$light;
+    }
+
+    &__container {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 2rem;
+        max-width:144rem;
+        margin:0 auto;
+    }
+
+    &__item {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        padding-bottom: 2.5rem;
+    }
+
+    &__img {
+        margin-bottom:1.5rem;
+    }
+
+    &__product {
+        margin-bottom:1.5rem;
+        color:$light;
+        font-family: 'MuaraRough';
+        font-size:2rem;
+        text-transform: uppercase;
+    }
+
+    &__button {
+
+    }
+
+    
+}
+

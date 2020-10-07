@@ -1,0 +1,46 @@
+
+
+  /* @import must be at top of file, otherwise CSS will not work */
+  @import url("//hello.myfonts.net/count/3c505e");
+    
+  @font-face {
+    font-family: 'MuaraRough';
+    src: url('/assets/fonts/font.woff2') format('woff2'), url('/assets/fonts/font.woff') format('woff');
+  }
+
+ .heading-primary {
+     font-family: 'MuaraRough';
+     font-size:7.5rem;
+     font-weight:bold;
+     color:$primary;
+     margin-bottom: 4rem;
+     text-transform:uppercase;
+
+     @include respond(lt) {
+       font-size:3.5rem;
+     }
+
+     @include respond(phone) {
+       font-size:2.5rem;
+     }
+ }
+
+ .heading-right {
+   text-align: right;
+ }
+
+ .test-font {
+   font-family: 'MuaraRough';
+ }
+
+ .heading-bg {
+    padding-bottom:1rem;
+    width:100%;
+ }
+
+ .paragraph, p {
+    font-family: 'Montserrat', sans-serif;
+    font-size:1.8rem;
+    color:$mid-grey-1;
+    line-height: $line-height--big;
+ }

@@ -1,0 +1,17 @@
+.content {
+
+    .gform_wrapper {
+        max-width:70%;
+        margin:4.5rem auto 0;
+        display:block;
+
+        .top_label .gfield_label {
+            font-size:1.6rem;
+            color:$mid-grey-1;
+        }
+
+        .gform_footer input.button {
+            background-color:$primary;
+        }
+    }
+}

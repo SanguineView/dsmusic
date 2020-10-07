@@ -1,0 +1,1 @@
+<?php the_post_thumbnail('full', array('class' => 'content__main-img aligncenter')); ?>
