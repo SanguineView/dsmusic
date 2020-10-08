@@ -68,6 +68,13 @@
             &:last-of-type {
                 margin-right: 0;
             }
+
+            &:hover {
+
+                svg {
+                    fill:$light;
+                }
+            }
         }
     }
 
@@ -81,6 +88,7 @@
     &__svg {
         width: 1.5rem;
         margin-right: 0.5rem;
+        transition:all 0.3s ease;
     }
 }
 
@@ -325,7 +333,6 @@
     }
 
     &__img {
-        margin-bottom:1.5rem;
     }
 
     &__product {

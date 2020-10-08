@@ -8,7 +8,11 @@
     src: url('/assets/fonts/font.woff2') format('woff2'), url('/assets/fonts/font.woff') format('woff');
   }
 
- .heading-primary {
+.heading-clip {
+}
+
+
+.heading-primary {
      font-family: 'MuaraRough';
      font-size:7.5rem;
      font-weight:bold;
@@ -23,24 +27,24 @@
      @include respond(phone) {
        font-size:2.5rem;
      }
- }
+}
 
- .heading-right {
-   text-align: right;
- }
+.heading-right {
+  text-align: right;
+}
 
- .test-font {
-   font-family: 'MuaraRough';
- }
+.test-font {
+  font-family: 'MuaraRough';
+}
 
- .heading-bg {
-    padding-bottom:1rem;
-    width:100%;
- }
+.heading-bg {
+  padding-bottom:1rem;
+  width:100%;
+}
 
- .paragraph, p {
-    font-family: 'Montserrat', sans-serif;
-    font-size:1.8rem;
-    color:$mid-grey-1;
-    line-height: $line-height--big;
- }
+.paragraph, p {
+  font-family: 'Montserrat', sans-serif;
+  font-size:1.8rem;
+  color:$mid-grey-1;
+  line-height: $line-height--big;
+}

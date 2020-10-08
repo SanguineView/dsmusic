@@ -8,6 +8,7 @@ html {
 	font-size: 62.5%; /* 10px browser default */
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
 }
 
 /* Chrome fix */
@@ -33,13 +34,13 @@ input[type="submit"],
 textarea:focus,
 .button,
 .gallery img {
-	transition: all 0.2s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 a {
 	color: $link--font-color;
 	text-decoration: underline;
-	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 a:focus,
